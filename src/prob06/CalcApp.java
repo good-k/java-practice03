@@ -9,7 +9,7 @@ public class CalcApp {
 
 		while (true) {
 			System.out.print(">>");
-			String line = scanner.nextLine();
+			String line = scanner.nextLine(); // 3 - 2
 			String[] tokens = line.split(" ");
 
 			int lValue = Integer.parseInt(tokens[0]);
@@ -45,6 +45,14 @@ public class CalcApp {
 					div.setlValue(lValue);
 					div.setrValue(rValue);
 					int result = div.calc();
+					System.out.println(">>" + result);
+					break;
+				}
+				case "%" : {
+					Mod mod = new Mod();
+					mod.setlValue(lValue);
+					mod.setrValue(rValue);
+					int result = mod.calc();
 					System.out.println(">>" + result);
 					break;
 				}
